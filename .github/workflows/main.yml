@@ -1,0 +1,33 @@
+name: Multi
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  run-on-ubuntu:
+    runs-on: ubuntu-latest
+    if: always()  # This ensures the job runs even if previous jobs fail
+    strategy:
+      matrix:
+        program_number: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11  # Replace with your desired Python version
+
+      - name: Run Python Program
+        continue-on-error: true
+        run: |
+          pip install requests beautifulsoup4 colorama fake-useragent
+          pip install Sys json time random datetime
+          wget https://github.com/Y908r/Gre/raw/main/bnb.py
+          ls
+          python bnb.py
