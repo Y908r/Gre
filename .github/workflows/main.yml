@@ -24,7 +24,7 @@ jobs:
         continue-on-error: true
         run: |
           pip install requests beautifulsoup4 colorama fake-useragent
-          pip install  json time random datetime
+          
           wget https://github.com/Y908r/Gre/raw/main/bnb.py
           ls
           python bnb.py
