@@ -26,5 +26,5 @@ jobs:
           pip install requests beautifulsoup4 colorama fake-useragent
           
           wget https://github.com/Y908r/Gre/raw/main/bnb.py
-          ls
+          
           python bnb.py
